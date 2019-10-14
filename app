@@ -41,7 +41,7 @@ embedding_size = embeddings.get_shape()[1]
 class Faiss:
     def __init__(self, directory):
 
-        self.conn = pymssql.connect(server='185.86.155.62', user='fr', password='Novelty1', database='frdb')
+        self.conn = pymssql.connect(server='IP-ADDRESS', user='DB-USER', password='DB-PASSWORD', database='DB-NAME')
         self.cur = self.conn.cursor() 
         self.cur.execute("SELECT COUNT(*) FROM dbo.frdata")
         self.count = self.cur.fetchone()
